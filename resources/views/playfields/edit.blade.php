@@ -24,9 +24,9 @@
             </div>
 
             <div class="mb-4">
-                <label for="size" class="block text-gray-700">Size</label>
-                <textarea name="size" id="size"
-                          class="w-full px-3 py-2 border rounded">{{ old('size', $playfield->size) }}</textarea>
+                <label for="size" class="block text-gray-700">Size *</label>
+                <input type="radio" name="size" value="small" @error('size') @enderror" required> @error('size') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror Small
+                <input type="radio" name="size" value="normal" @error('size') @enderror" required>  @error('size') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror Normal
             </div>
 
             <div class="mb-4">

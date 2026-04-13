@@ -10,6 +10,7 @@
             <table class="min-w-full bg-white">
                 <thead>
                 <tr>
+                    <th class="py-2 px-4 border-b">ID</th>
                     <th class="py-2 px-4 border-b">Sponsor</th>
                     <th class="py-2 px-4 border-b">Name</th>
                     <th class="py-2 px-4 border-b">Size</th>
@@ -19,6 +20,7 @@
                 <tbody>
                 @foreach($playfields as $playfield)
                     <tr class="@if($playfield->size == "small") bg-yellow-100 @endif">
+                        <td class="py-2 px-4 border-b">{{ $playfield->id }}</td>
                         <td class="py-2 px-4 border-b">{{ $playfield->sponsor ?? 'NULL' }}</td>
                         <td class="py-2 px-4 border-b">{{ $playfield->name }}</td>
                         <td class="py-2 px-4 border-b">{{ $playfield->size }}</td>

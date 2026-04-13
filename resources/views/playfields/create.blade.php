@@ -24,9 +24,8 @@
 
             <div class="mb-4">
                 <label for="size" class="block text-gray-700">Size *</label>
-                <input type="text" name="size" id="size" value="{{ old('size') }}"
-                       class="w-full px-3 py-2 border rounded @error('size') border-red-500 @enderror" required>
-                @error('size') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
+                <input type="radio" name="size" value="small" @error('size') @enderror" required> @error('size') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror Small
+                <input type="radio" name="size" value="normal" @error('size') @enderror" required>  @error('size') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror Normal
             </div>
 
             <div class="mb-4">
