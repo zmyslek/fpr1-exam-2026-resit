@@ -15,6 +15,7 @@
                     <th class="py-2 px-4 border-b">Name</th>
                     <th class="py-2 px-4 border-b">Size</th>
                     <th class="py-2 px-4 border-b">Last maintained at</th>
+                    <th class="py-2 px-4 border-b">Games count</th>
                 </tr>
                 </thead>
                 <tbody>
