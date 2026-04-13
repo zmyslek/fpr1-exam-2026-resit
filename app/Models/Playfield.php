@@ -27,4 +27,8 @@ class Playfield extends Model
             return "Vled {$this->id}";
         }
     }
+    public function games()
+    {
+        return $this->hasMany(Game::class, 'playfield_id', 'id');
+    }
 }

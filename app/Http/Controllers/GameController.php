@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Game;
+use App\Models\Playfield;
 use Illuminate\Http\Request;
 
 class GameController extends Controller
@@ -12,7 +13,7 @@ class GameController extends Controller
      */
     public function index()
     {
-        $matches = Game::all();
+        $matches = Game::with('playfield')->get();
         return view('games.index',
             compact(
                 'matches'));
@@ -24,9 +25,9 @@ class GameController extends Controller
      * @return Response
      */
     public function create()
-    { // Nothing TODO ... yet
-
-
+    {
+        $playfields = Playfield::all();
+        return view('games.create', compact('playfields'));
     }
 
 
@@ -62,7 +63,8 @@ class GameController extends Controller
      */
     public function edit(Game $match)
     {
-        //
+        $playfields = Playfield::all();
+        return view('games.edit', compact('playfields'));
     }
 
     /**

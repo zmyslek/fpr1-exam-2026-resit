@@ -9,6 +9,7 @@ class PlayfieldController extends Controller
 {
     public function index()
     {
+        $playfields = Playfield::withCount('games')->get();
         return view('playfields.index', [
             'playfields' => Playfield::paginate(10),
         ]);

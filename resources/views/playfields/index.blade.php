@@ -25,6 +25,7 @@
                         <td class="py-2 px-4 border-b">{{ $playfield->name }}</td>
                         <td class="py-2 px-4 border-b">{{ $playfield->size }}</td>
                         <td class="py-2 px-4 border-b">{{ $playfield->last_maintained_at }}</td>
+                        <td class="py-2 px-4 border-b">{{ $playfield->games_count }}</td>
                         <td class="py-2 px-4 border-b">
                             <a href="{{ route('playfields.show', $playfield) }}" class="text-blue-500">View</a>
                             <a href="{{ route('playfields.edit', $playfield) }}" class="text-yellow-500 ml-2">Edit</a>

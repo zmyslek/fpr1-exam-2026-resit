@@ -22,6 +22,7 @@
                                         <th>Date</th>
                                         <th>Time</th>
                                         <th>Playfield</th>
+                                        <th>ID</th>
                                         <th>Division</th>
                                         <th>A</th>
                                         <th>B</th>
@@ -34,6 +35,7 @@
                                             <td>{{ $match->date }}</td>
                                             <td>{{ $match->time }}</td>
                                             <td>{{ $match->playfield }}</td>
+                                            <td>{{ $match->playfield->name }}</td>
                                             <td>{{ $match->division }}</td>
                                             <td>{{ $match->team_a }}</td>
                                             <td>{{ $match->team_b }}</td>
